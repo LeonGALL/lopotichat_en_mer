@@ -67,7 +67,7 @@ $(document).ready(function () {
                     d = $(
                       "<a href='https://sauveteurdudunkerquois.fr/" +
                         data.link +
-                        '"></a>"
+                        "'></a>"
                     ).text("https://sauveteurdudunkerquois.fr/" + data.link);
                     $("#liens").append(d);
                     d = $("<br>");
@@ -150,7 +150,7 @@ $(document).ready(function () {
                     d = $(
                       "<a href='https://sauveteurdudunkerquois.fr/" +
                         data.link +
-                        '"></a>"
+                        "'></a>"
                     ).text("https://sauveteurdudunkerquois.fr/" + data.link);
                     $("#liens").append(d);
                     d = $("<br>");
@@ -216,7 +216,7 @@ $(document).ready(function () {
                     d = $(
                       "<a href='https://sauveteurdudunkerquois.fr/" +
                         data.link +
-                        '"></a>"
+                        "'></a>"
                     ).text("https://sauveteurdudunkerquois.fr/" + data.link);
                     $("#liens").append(d);
                     d = $("<br>");
@@ -282,7 +282,7 @@ $(document).ready(function () {
                     d = $(
                       "<a href='https://sauveteurdudunkerquois.fr/" +
                         data.link +
-                        '"></a>"
+                        "'></a>"
                     ).text("https://sauveteurdudunkerquois.fr/" + data.link);
                     $("#liens").append(d);
                     d = $("<br>");
