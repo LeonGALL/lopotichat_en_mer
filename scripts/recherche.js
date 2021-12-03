@@ -60,9 +60,6 @@ $(document).ready(function () {
                   let taille = res.length;
                   for (let index = 0; index < taille; index++) {
                     let data = res[index];
-                    console.log(
-                      "https://sauveteurdudunkerquois.fr/" + data.link
-                    );
                     let d = $("<p></p>").text(data.nom + " " + data.prenom);
                     $("#liens").append(d);
                     d = $("<br>");
@@ -146,9 +143,6 @@ $(document).ready(function () {
                   let taille = res.length;
                   for (let index = 0; index < taille; index++) {
                     let data = res[index];
-                    console.log(
-                      "https://sauveteurdudunkerquois.fr/" + data.link
-                    );
                     let d = $("<p></p>").text(data.titre);
                     $("#liens").append(d);
                     d = $("<br>");
@@ -215,9 +209,6 @@ $(document).ready(function () {
                   let taille = res.length;
                   for (let index = 0; index < taille; index++) {
                     let data = res[index];
-                    console.log(
-                      "https://sauveteurdudunkerquois.fr/" + data.link
-                    );
                     let d = $("<p></p>").text(data.ville);
                     $("#liens").append(d);
                     d = $("<br>");
@@ -284,9 +275,6 @@ $(document).ready(function () {
                   let taille = res.length;
                   for (let index = 0; index < taille; index++) {
                     let data = res[index];
-                    console.log(
-                      "https://sauveteurdudunkerquois.fr/" + data.link
-                    );
                     let d = $("<p></p>").text(data.titre);
                     $("#liens").append(d);
                     d = $("<br>");
