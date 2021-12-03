@@ -45,8 +45,8 @@ $(document).ready(function () {
             if (type == "centre_secours") {
               structureb = { centre_secours: donnee };
             }
-            if (type == "biblio") {
-              structureb = { biblio: donnee };
+            if (type == "bibliographie") {
+              structureb = { bibliographie: donnee };
             }
             var structure = JSON.stringify(structureb);
             $.ajax({
@@ -59,7 +59,7 @@ $(document).ready(function () {
                 try {
                   let taille = res.length;
                   for (let index = 0; index < taille; index++) {
-                    let data = res[index]; //JSON.parse(res[index]);
+                    let data = res[index];
                     console.log(
                       "https://sauveteurdudunkerquois.fr/" + data.link
                     );
@@ -78,8 +78,6 @@ $(document).ready(function () {
                   }
                 } catch (e) {
                   console.log(e);
-                  console.log(res);
-                  console.log(data);
                 }
               },
             });
@@ -133,8 +131,8 @@ $(document).ready(function () {
             if (type == "centre_secours") {
               structureb = { centre_secours: donnee };
             }
-            if (type == "biblio") {
-              structureb = { biblio: donnee };
+            if (type == "bibliographie") {
+              structureb = { bibliographie: donnee };
             }
             var structure = JSON.stringify(structureb);
             $.ajax({
@@ -145,23 +143,28 @@ $(document).ready(function () {
                 structure,
               success: function (res) {
                 try {
-                  var data = JSON.parse(res);
-                  let taille = data.length;
+                  let taille = res.length;
                   for (let index = 0; index < taille; index++) {
-                    let d = $("<p></p>").text(
-                      data[index].nom + " " + data[index].prenom
+                    let data = res[index];
+                    console.log(
+                      "https://sauveteurdudunkerquois.fr/" + data.link
                     );
+                    let d = $("<p></p>").text(data.titre);
                     $("#liens").append(d);
                     d = $("<br>");
                     $("#liens").append(d);
-                    d = $("<a></a>").text(
-                      "https://sauveteurdudunkerquois.fr/" + data[index].link
-                    );
+                    d = $(
+                      "<a href='https://sauveteurdudunkerquois.fr/'" +
+                        data.link +
+                        "></a>"
+                    ).text("https://sauveteurdudunkerquois.fr/" + data.link);
                     $("#liens").append(d);
                     d = $("<br>");
                     $("#liens").append(d);
                   }
-                } catch (e) {}
+                } catch (e) {
+                  console.log(e);
+                }
               },
             });
           }
@@ -197,8 +200,8 @@ $(document).ready(function () {
             if (type == "centre_secours") {
               structureb = { centre_secours: donnee };
             }
-            if (type == "biblio") {
-              structureb = { biblio: donnee };
+            if (type == "bibliographie") {
+              structureb = { bibliographie: donnee };
             }
             var structure = JSON.stringify(structureb);
             $.ajax({
@@ -209,30 +212,35 @@ $(document).ready(function () {
                 structure,
               success: function (res) {
                 try {
-                  var data = JSON.parse(res);
-                  let taille = data.length;
+                  let taille = res.length;
                   for (let index = 0; index < taille; index++) {
-                    let d = $("<p></p>").text(
-                      data[index].nom + " " + data[index].prenom
+                    let data = res[index];
+                    console.log(
+                      "https://sauveteurdudunkerquois.fr/" + data.link
                     );
+                    let d = $("<p></p>").text(data.ville);
                     $("#liens").append(d);
                     d = $("<br>");
                     $("#liens").append(d);
-                    d = $("<a></a>").text(
-                      "https://sauveteurdudunkerquois.fr/" + data[index].link
-                    );
+                    d = $(
+                      "<a href='https://sauveteurdudunkerquois.fr/'" +
+                        data.link +
+                        "></a>"
+                    ).text("https://sauveteurdudunkerquois.fr/" + data.link);
                     $("#liens").append(d);
                     d = $("<br>");
                     $("#liens").append(d);
                   }
-                } catch (e) {}
+                } catch (e) {
+                  console.log(e);
+                }
               },
             });
           }
           stock($("#texte-cs").val(), $("#menu-deroulant").val());
         });
         break;
-      case "biblio":
+      case "bibliographie":
         document.getElementById("search-biblio").style.display = "inline";
         document.getElementById("search-personne").style.display = "none";
         document.getElementById("search-sortie").style.display = "none";
@@ -261,8 +269,8 @@ $(document).ready(function () {
             if (type == "centre_secours") {
               structureb = { centre_secours: donnee };
             }
-            if (type == "biblio") {
-              structureb = { biblio: donnee };
+            if (type == "bibliographie") {
+              structureb = { bibliographie: donnee };
             }
             var structure = JSON.stringify(structureb);
             $.ajax({
@@ -273,23 +281,28 @@ $(document).ready(function () {
                 structure,
               success: function (res) {
                 try {
-                  var data = JSON.parse(res);
-                  let taille = data.length;
+                  let taille = res.length;
                   for (let index = 0; index < taille; index++) {
-                    let d = $("<p></p>").text(
-                      data[index].nom + " " + data[index].prenom
+                    let data = res[index];
+                    console.log(
+                      "https://sauveteurdudunkerquois.fr/" + data.link
                     );
+                    let d = $("<p></p>").text(data.titre);
                     $("#liens").append(d);
                     d = $("<br>");
                     $("#liens").append(d);
-                    d = $("<a></a>").text(
-                      "https://sauveteurdudunkerquois.fr/" + data[index].link
-                    );
+                    d = $(
+                      "<a href='https://sauveteurdudunkerquois.fr/'" +
+                        data.link +
+                        "></a>"
+                    ).text("https://sauveteurdudunkerquois.fr/" + data.link);
                     $("#liens").append(d);
                     d = $("<br>");
                     $("#liens").append(d);
                   }
-                } catch (e) {}
+                } catch (e) {
+                  console.log(e);
+                }
               },
             });
           }
