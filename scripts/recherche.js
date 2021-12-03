@@ -59,7 +59,7 @@ $(document).ready(function () {
                 try {
                   let taille = res.length;
                   for (let index = 0; index < taille; index++) {
-                    let data = JSON.parse(res[index]);
+                    let data = res[index];//JSON.parse(res[index]);
                     console.log("DATA : " + data + " : ENDDATA");
                     let d = $("<p></p>").text(data.nom + " " + data.prenom);
                     $("#liens").append(d);
