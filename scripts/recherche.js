@@ -75,6 +75,8 @@ $(document).ready(function () {
                   }
                 } catch (e) {
                   console.log(e);
+                  console.log(res);
+                  console.log(data);
                 }
               },
             });
