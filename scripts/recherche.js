@@ -65,9 +65,9 @@ $(document).ready(function () {
                     d = $("<br>");
                     $("#liens").append(d);
                     d = $(
-                      "<a href='https://sauveteurdudunkerquois.fr/'" +
+                      "<a href='https://sauveteurdudunkerquois.fr/" +
                         data.link +
-                        "></a>"
+                        '"></a>"
                     ).text("https://sauveteurdudunkerquois.fr/" + data.link);
                     $("#liens").append(d);
                     d = $("<br>");
@@ -148,9 +148,9 @@ $(document).ready(function () {
                     d = $("<br>");
                     $("#liens").append(d);
                     d = $(
-                      "<a href='https://sauveteurdudunkerquois.fr/'" +
+                      "<a href='https://sauveteurdudunkerquois.fr/" +
                         data.link +
-                        "></a>"
+                        '"></a>"
                     ).text("https://sauveteurdudunkerquois.fr/" + data.link);
                     $("#liens").append(d);
                     d = $("<br>");
@@ -214,9 +214,9 @@ $(document).ready(function () {
                     d = $("<br>");
                     $("#liens").append(d);
                     d = $(
-                      "<a href='https://sauveteurdudunkerquois.fr/'" +
+                      "<a href='https://sauveteurdudunkerquois.fr/" +
                         data.link +
-                        "></a>"
+                        '"></a>"
                     ).text("https://sauveteurdudunkerquois.fr/" + data.link);
                     $("#liens").append(d);
                     d = $("<br>");
@@ -280,9 +280,9 @@ $(document).ready(function () {
                     d = $("<br>");
                     $("#liens").append(d);
                     d = $(
-                      "<a href='https://sauveteurdudunkerquois.fr/'" +
+                      "<a href='https://sauveteurdudunkerquois.fr/" +
                         data.link +
-                        "></a>"
+                        '"></a>"
                     ).text("https://sauveteurdudunkerquois.fr/" + data.link);
                     $("#liens").append(d);
                     d = $("<br>");
