@@ -60,7 +60,9 @@ $(document).ready(function () {
                   let taille = res.length;
                   for (let index = 0; index < taille; index++) {
                     let data = res[index]; //JSON.parse(res[index]);
-                    console.log("DATA : " + data.nom + " : ENDDATA");
+                    console.log(
+                      "https://sauveteurdudunkerquois.fr/" + data.link
+                    );
                     let d = $("<p></p>").text(data.nom + " " + data.prenom);
                     $("#liens").append(d);
                     d = $("<br>");
