@@ -57,7 +57,7 @@ $(document).ready(function () {
                 structure,
               success: function (res) {
                 try {
-                  data = JSON.parse(res);
+                  var data = JSON.parse(res);
                   let taille = data.length;
                   for (let index = 0; index < taille; index++) {
                     let d = $("<p></p>").text(
@@ -140,7 +140,7 @@ $(document).ready(function () {
                 structure,
               success: function (res) {
                 try {
-                  data = JSON.parse(res);
+                  var data = JSON.parse(res);
                   let taille = data.length;
                   for (let index = 0; index < taille; index++) {
                     let d = $("<p></p>").text(
@@ -204,7 +204,7 @@ $(document).ready(function () {
                 structure,
               success: function (res) {
                 try {
-                  data = JSON.parse(res);
+                  var data = JSON.parse(res);
                   let taille = data.length;
                   for (let index = 0; index < taille; index++) {
                     let d = $("<p></p>").text(
@@ -268,7 +268,7 @@ $(document).ready(function () {
                 structure,
               success: function (res) {
                 try {
-                  data = JSON.parse(res);
+                  var data = JSON.parse(res);
                   let taille = data.length;
                   for (let index = 0; index < taille; index++) {
                     let d = $("<p></p>").text(
