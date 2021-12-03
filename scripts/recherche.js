@@ -67,9 +67,11 @@ $(document).ready(function () {
                     $("#liens").append(d);
                     d = $("<br>");
                     $("#liens").append(d);
-                    d = $("<a></a>").text(
-                      "https://sauveteurdudunkerquois.fr/" + data.link
-                    );
+                    d = $(
+                      "<a href='https://sauveteurdudunkerquois.fr/'" +
+                        data.link +
+                        "></a>"
+                    ).text("https://sauveteurdudunkerquois.fr/" + data.link);
                     $("#liens").append(d);
                     d = $("<br>");
                     $("#liens").append(d);
