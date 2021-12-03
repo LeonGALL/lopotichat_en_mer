@@ -57,17 +57,15 @@ $(document).ready(function () {
                 structure,
               success: function (res) {
                 try {
-                  var data = JSON.parse(res);
-                  let taille = data.length;
+                  let taille = res.length;
                   for (let index = 0; index < taille; index++) {
-                    let d = $("<p></p>").text(
-                      data[index].nom + " " + data[index].prenom
-                    );
+                    let data = JSON.parse(res[index]);
+                    let d = $("<p></p>").text(data.nom + " " + data.prenom);
                     $("#liens").append(d);
                     d = $("<br>");
                     $("#liens").append(d);
                     d = $("<a></a>").text(
-                      "https://sauveteurdudunkerquois.fr/" + data[index].link
+                      "https://sauveteurdudunkerquois.fr/" + data.link
                     );
                     $("#liens").append(d);
                     d = $("<br>");
