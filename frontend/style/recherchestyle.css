@@ -1,0 +1,79 @@
+html{
+    background-color: antiquewhite;
+    font-family: system-ui;
+}
+
+h1{
+	color: red;
+}
+
+h2{
+	color: blue;
+}
+
+h3{
+    margin: 0;
+	color: green;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.topnav {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9e9e9;
+}
+
+.topnav input[type=text] {
+    font-size: 1.5em;
+    border: none;
+}
+
+.topnav .search-container button {
+    background: #ddd;
+    float: right;
+    margin-right: 16px;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+}
+
+#menu-deroulant{
+    font-size: 1.5em;
+    border: none;
+}
+
+.topnav .search-container button:hover {
+    background: #ccc;
+}
+
+#search-personne{
+    display: none;
+}
+#search-sortie{
+    display: none;
+}
+#search-cs{
+    display: none;
+}
+#search-biblio{
+    display: none;
+}
+
+.Footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+    background-color: black;
+    color: white;
+    border : none;
+}

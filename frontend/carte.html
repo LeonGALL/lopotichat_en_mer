@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Joyeuses Fêtes!!</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="index">
+        <meta name="keywords" content="sauveteur, nageur, Dunkerque, marin">
+        <meta name="author"
+          content="Benjamin Gliech, Salwa El Fatini, Pierre Matter, Léon Gall, Noé Le Cam, Rachel Anstotz, Maxime Bucher, Félix Herrmann">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/cartestyle.css">
+    </head>
+
+    <div style="height: 4400px">
+        <img src="img/fond.jpg" style="position: fixed;" id="bg_img">
+        <div id="flex_container">
+            <div id="text1" class="text">Hey ! <br> Scroll un peu ;) <br> (pas trop vite parce que c'est cassé)</div>
+            <div id="text2" class="text">Juste pour te souhaiter <br> ...</div>
+            <div id="text3" class="text">De très bonnes fêtes <br> de fin d'année !!! <br> ... </div>
+            <div id="text4" class="text">Et comme tu es <br> une personne incroyable <br> ... </div>
+            <div id="chat" class="text"><img src="img/chat.jpg" id="chat_img""></div>
+        </div>
+    </div>
+</html>
+
+<script>
+    let win_w = window.innerWidth;
+    let scroll = window.scrollY;
+    let bg_img = document.getElementById("bg_img");
+    let flex_container = document.getElementById("flex_container");
+    let text1 = document.getElementById("text1");
+    let text2 = document.getElementById("text2");
+    let text3 = document.getElementById("text3");
+    let text4 = document.getElementById("text4");
+    let chat = document.getElementById("chat");
+    let chat_img = document.getElementById("chat_img");
+
+    bg_img.style.width = win_w.toString() + "px";
+    flex_container.style.height = bg_img.height;
+    chat.style.width = (win_w/2).toString() + "px";
+    text1.style.opacity = (1);
+
+    window.onresize = function() {
+        win_w = window.innerWidth;
+        bg_img.style.width = win_w.toString() + "px";
+        flex_container.style.height = bg_img.height;
+    }
+
+    window.addEventListener("scroll", function () {
+        scroll = window.scrollY;
+
+        if (scroll < 400) {
+            text1.style.opacity = (1);
+        } else if (scroll > 400 && scroll < 600) {
+            text1.style.opacity = (1-(scroll - 400)/200);
+            text2.style.opacity = (0);
+        } else if (scroll > 600 && scroll < 800) {
+            text1.style.opacity = (0);
+            text2.style.opacity = ((scroll - 600)/200);
+        } else if (scroll > 800 && scroll < 1200) {
+            text1.style.opacity = (0);
+            text2.style.opacity = (1);
+            text3.style.opacity = (0);
+        } else if (scroll > 1200 && scroll < 1400) {
+            text2.style.opacity = (1-(scroll - 1200)/200);
+            text3.style.opacity = (0);
+        } else if (scroll > 1400 && scroll < 1600) {
+            text2.style.opacity = (0);
+            text3.style.opacity = ((scroll - 1400)/200);
+        } else if (scroll > 1600 && scroll < 2000) {
+            text2.style.opacity = (0);
+            text3.style.opacity = (1);
+            text4.style.opacity = (0);
+        } else if (scroll > 2000 && scroll < 2200) {
+            text3.style.opacity = (1-(scroll - 2000)/200);
+            text4.style.opacity = (0);
+        } else if (scroll > 2200 && scroll < 2400) {
+            text3.style.opacity = (0);
+            text4.style.opacity = ((scroll - 2200)/200);
+            chat.style.opacity = (0);
+        } else if (scroll > 2400 && scroll < 2800) {
+            text3.style.opacity = (0);
+            text4.style.opacity = (1);
+            chat.style.opacity = (0);
+        } else if (scroll > 2800 && scroll < 3000) {
+            text4.style.opacity = (1-(scroll - 2800)/200);
+            chat.style.opacity = (0);
+        } else if (scroll > 3000 && scroll < 3200) {
+            text4.style.opacity = (0);
+            chat.style.opacity = ((scroll - 3000)/200);
+        } else if (scroll > 3200 && scroll < 3600) {
+            chat.style.opacity = (1);
+        }
+    })
+</script>

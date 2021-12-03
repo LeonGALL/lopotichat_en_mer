@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+#flex_container {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.text {
+    opacity: 0;
+    padding: 0px;
+    position: fixed;
+    width: 100%; 
+    top: 50%;
+    transform: translateY(-50%);  
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 1;
+}
+
+#chat_img {
+    transform: translateY(10%); 
+    width: 80%;
+}
