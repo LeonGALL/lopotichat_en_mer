@@ -1,88 +1,129 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Recherche</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="recherche de sauveteurs" />
+    <meta name="keywords" content="sauveteur, nageur, Dunkerque, marin" />
+    <meta
+      name="author"
+      content="Benjamin Gliech, Salwa El Fatini, Pierre Matter, Léon Gall, Noé Le Cam, Rachel Anstotz, Maxime Bucher, Félix Herrmann"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/recherchestyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
 
-<head>
-  <title>Recherche</title>
-  <meta charset="UTF-8">
-  <meta name="description" content="recherche de sauveteurs">
-  <meta name="keywords" content="sauveteur, nageur, Dunkerque, marin">
-  <meta name="author"
-    content="Benjamin Gliech, Salwa El Fatini, Pierre Matter, Léon Gall, Noé Le Cam, Rachel Anstotz, Maxime Bucher, Félix Herrmann">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/recherchestyle.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+  <body>
+    <header>
+      <h1>Recherche d'une personne</h1>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        >Retour à la page principale</a
+      ><br />
+      <a href="carte.html">Joyeuses fêtes</a>
+    </header>
 
-<body>
-  <header>
-    <h1>Recherche d'une personne</h1>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Retour à la page principale</a><br>
-    <a href="carte.html">Joyeuses fêtes</a>
-  </header>
+    <div class="topnav">
+      <h3>RECHERCHE :</h3>
+      <br />
+      <select id="menu-deroulant">
+        <option>Affinez votre recherche</option>
+        <option value="personne">Personne</option>
+        <option value="sortie">Sortie</option>
+        <option value="centre_secours">Centre de secours</option>
+        <option value="biblio">Bibliographie</option>
+      </select>
+      <button id="suivant" type="submit">Suivant</button>
 
-  <div class="topnav">
-    <h3>RECHERCHE : </h3>
-    <br>
-    <select id="menu-deroulant">
-      <option>Affinez votre recherche</option>
-      <option value="personne">Personne</option>
-      <option value="sortie">Sortie</option>
-      <option value="centre_secours">Centre de secours</option>
-      <option value="biblio">Bibliographie</option>
-    </select>
-    <button id="suivant" type="submit">Suivant</button>
-
-    <div id="search-personne">
+      <div id="search-personne">
         <!--inputs : nom et prenom-->
-        <input id="texte-nom" type="text" placeholder="Entrer un nom" name="search-personne">
-        <input id="texte-prenom" type="text" placeholder="Entrer un prénom" name="search-personne">
+        <input
+          id="texte-nom"
+          type="text"
+          placeholder="Entrer un nom"
+          name="search-personne"
+        />
+        <input
+          id="texte-prenom"
+          type="text"
+          placeholder="Entrer un prénom"
+          name="search-personne"
+        />
         <button class="add" type="submit"><i class="fa fa-search"></i></button>
+      </div>
 
-    </div>
-
-    <div id="search-sortie">
+      <div id="search-sortie">
         <!--inputs : jj mm et annee-->
-        <input id="texte-sortie-j" type="text" placeholder="JJ" name="search" minlength="1" maxlength="2" size="1">
-        <input id="texte-sortie-m" type="text" placeholder="MM" name="search" minlength="1" maxlength="2" size="1">        
-        <input id="texte-sortie-a" type="text" placeholder="AAAA" name="search" minlength="4" maxlength="4" size="2"> 
+        <input
+          id="texte-sortie-j"
+          type="text"
+          placeholder="JJ"
+          name="search"
+          minlength="1"
+          maxlength="2"
+          size="1"
+        />
+        <input
+          id="texte-sortie-m"
+          type="text"
+          placeholder="MM"
+          name="search"
+          minlength="1"
+          maxlength="2"
+          size="1"
+        />
+        <input
+          id="texte-sortie-a"
+          type="text"
+          placeholder="AAAA"
+          name="search"
+          minlength="4"
+          maxlength="4"
+          size="2"
+        />
         <button class="add" type="submit"><i class="fa fa-search"></i></button>
-  
-    </div>
+      </div>
 
-    <div id="search-cs">
+      <div id="search-cs">
         <!--input : ville-->
-        <input id="texte-cs" type="text" placeholder="Entrer un nom de ville" name="search-cs">
+        <input
+          id="texte-cs"
+          type="text"
+          placeholder="Entrer un nom de ville"
+          name="search-cs"
+        />
         <button class="add" type="submit"><i class="fa fa-search"></i></button>
-  
-    </div>
+      </div>
 
-    <div id="search-biblio">
+      <div id="search-biblio">
         <!--input : titre-->
-        <input id="texte-biblio" type="text" placeholder="Entrer le titre" name="search-biblio">
+        <input
+          id="texte-biblio"
+          type="text"
+          placeholder="Entrer le titre"
+          name="search-biblio"
+        />
         <button class="add" type="submit"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+    <div class="liens" id="liens"></div>
+    <div class="login">
+      <h3>LOGIN</h3>
+      <label>Identifiant</label>
+      <input type="text" />
+      <label>Mot de Passe</label>
+      <input type="password" />
     </div>
 
-  </div>
+    <footer class="Footer">
+      <a href="https://www.facebook.com/groups/938396409644949">facebook</a>
+      <a href="https://twitter.com/boutelierphili1">Twitter</a>
+    </footer>
 
-  <div class="login">
-
-    <h3>LOGIN</h3>
-    <label>Identifiant</label>
-    <input type="text">
-    <label>Mot de Passe</label>
-    <input type="password">
-
-  </div>
-
-
-  <footer class="Footer">
-    <a href="https://www.facebook.com/groups/938396409644949">facebook</a>
-    <a href="https://twitter.com/boutelierphili1">Twitter</a>
-  </footer>
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="scripts/recherche.js"></script>
-</body>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/recherche.js"></script>
+  </body>
 </html>
