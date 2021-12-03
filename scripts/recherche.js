@@ -73,7 +73,9 @@ $(document).ready(function () {
                     d = $("<br>");
                     $("#liens").append(d);
                   }
-                } catch (e) {}
+                } catch (e) {
+                  console.log(e);
+                }
               },
             });
           }
