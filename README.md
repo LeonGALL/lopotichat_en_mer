@@ -13,4 +13,5 @@ Nous nous donnons rendez-vous l'année prochaine pour retenter l'aventure :wink:
 L'équipe des poti chats :cat:,
 
 Rachel Anstotz, Maxime Bucher, Salwa El-Fatini, Léon Gall, Benjamin Gliech, Felix Herrmann, Noé Le Cam, Pierre Matter.
-Étudiants en L2 Cursus Master Ingénierie en informatique à l'Université de Strasbourg.
+
+_Étudiants en L2 Cursus Master Ingénierie en informatique à l'Université de Strasbourg._
